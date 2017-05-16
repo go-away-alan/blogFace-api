@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose')
 
-const bookSchema = new mongoose.Schema({
+const pageSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true
@@ -36,11 +36,11 @@ const bookSchema = new mongoose.Schema({
   }
 })
 
-bookSchema.virtual('length').get(function length () {
+pageSchema.virtual('length').get(function length () {
   // Changed text to title.
   return this.title.length
 })
 
-const Book = mongoose.model('Book', bookSchema)
+const Page = mongoose.model('Page', pageSchema)
 
-module.exports = Book
+module.exports = Page
