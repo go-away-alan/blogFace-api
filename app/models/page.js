@@ -11,6 +11,22 @@ const pageSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
+  header: {
+    type: String,
+    required: true
+  },
+  subheader: {
+    type: String,
+    required: true
+  },
+  pageContent: {
+    type: String,
+    required: true
+  },
+  contact: {
+    type: String,
+    required: true
+  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
