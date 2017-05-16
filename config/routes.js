@@ -17,5 +17,7 @@ module.exports = require('lib/wiring/routes')
 .patch('/change-password/:id', 'users#changepw')
 .resources('users', { only: ['index', 'show'] })
 
-// all routes created
+// AZ: Added resource for pages here.
+.resources('pages')
 
+// all routes created
