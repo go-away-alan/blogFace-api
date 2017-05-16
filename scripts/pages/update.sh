@@ -4,11 +4,14 @@
 
 API="http://localhost:4741"
 URL_PATH="/pages"
-TOKEN="np5/wbCPMRkwM3hl+pIPx+TrQSHetZgItaatrP8gWqk=--2gkVQNh8CObgqwKOw0omTL5/K02T/YTdJVJzlq7yS1Q="
-#ID of a Specific Page
-ID="validIdHere"
-TYPE="1"
-TITLE="Sample"
+TYPE=1
+TITLE="My blogFace Page"
+HEADER="About Me"
+SUBHEADER="Andy Zhong"
+CONTENT="I updated my Page!"
+CONTACT="@andyjz"
+TOKEN="PKovx5SovaSpolfE76ado9Vu+UD2X/ihhE35BDqY3xM=--PHIllUNmbKmXmQiFh8h8JIn4ad1jKLGMnA3z0fW4syk="
+ID="591b3ded212207f9bb92fab6"
 curl "${API}${URL_PATH}/${ID}" \
   --include \
   --request PATCH \
@@ -17,7 +20,11 @@ curl "${API}${URL_PATH}/${ID}" \
   --data '{
     "page": {
       "templateType": "'"${TYPE}"'",
-      "pageTitle": "'"${TITLE}"'"
+      "pageTitle": "'"${TITLE}"'",
+      "header": "'"${HEADER}"'",
+      "subheader": "'"${SUBHEADER}"'",
+      "pageContent": "'"${CONTENT}"'",
+      "contact": "'"${CONTACT}"'"
     }
   }'
 

@@ -29,20 +29,21 @@ const show = (req, res) => {
 }
 
 const destroy = (req, res, next) => {
+  console.log('ReqPage is ', req.page)
   req.page.remove()
     .then(() => res.sendStatus(204))
     .catch(next)
 }
 
 const create = (req, res, next) => {
-  console.log('Req is', req.user)
-  // When we create, it will fill in the owner for you. In other words, it adds a key, _owner, to req.body.example and sets the req.user._id as well.
+  console.log('ReqUser is ', req.user)
+  // When we create, it will fill in the owner for you. In other words, it adds a key, owner, to req.body.example and sets the req.user._id as well.
   const page = Object.assign(req.body.page, {
     owner: req.user._id
   })
   console.log(page)
   // Executes the create on the Page model with the page object.
-  // This page object is created with data from the client and the current user as _owner.
+  // This page object is created with data from the client and the current user as owner.
   Page.create(page)
     // The newly created page we get from database is rendered as JSON.
     .then(page =>
@@ -56,7 +57,7 @@ const create = (req, res, next) => {
 
 const update = (req, res, next) => {
   // Protects against malicious users by deleting the owner key from req.body.
-  delete req.body._owner  // disallow owner reassignment.
+  delete req.body.owner  // disallow owner reassignment.
   // Updates the example in the database.
   req.page.update(req.body.page)
     // If update is successful, then send 204 error message to the client.

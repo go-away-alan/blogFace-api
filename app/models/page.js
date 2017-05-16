@@ -40,7 +40,7 @@ const pageSchema = new mongoose.Schema({
 //     virtuals: true,
 //     transform: function (doc, ret, options) {
 //       const userId = (options.user && options.user._id) || false
-//       ret.editable = userId && userId.equals(doc._owner)
+//       ret.editable = userId && userId.equals(doc.owner)
 //       return ret
 //     }
 //   }

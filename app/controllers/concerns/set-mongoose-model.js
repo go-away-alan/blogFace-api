@@ -6,7 +6,7 @@ const setMongooseModel = (model, options) =>
   function (req, res, next) {
     const search = { _id: req.params.id }
     if (options && options.forUser) {
-      search._owner = req.user
+      search.owner = req.user
     }
 
     model.findOne(search, (error, document) => {

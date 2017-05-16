@@ -25,7 +25,7 @@ const show = (req, res) => {
 
 const create = (req, res, next) => {
   const example = Object.assign(req.body.example, {
-    _owner: req.user._id
+    owner: req.user._id
   })
   Example.create(example)
     .then(example =>
@@ -37,7 +37,7 @@ const create = (req, res, next) => {
 }
 
 const update = (req, res, next) => {
-  delete req.body._owner  // disallow owner reassignment.
+  delete req.body.owner  // disallow owner reassignment.
   req.example.update(req.body.example)
     .then(() => res.sendStatus(204))
     .catch(next)
