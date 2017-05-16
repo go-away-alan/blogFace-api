@@ -5,17 +5,19 @@ const mongoose = require('mongoose')
 const pageSchema = new mongoose.Schema({
   pageTitle: {
     type: String,
-    required: true
+    // AZ: Need to Change this back to true once the front end has been completed.
+    required: false
   },
   templateType: {
     type: Number,
-    required: true
+    // AZ: Need to Change this back to true once the front end has been completed.
+    required: false
   },
   header: {
     type: String,
     required: true
   },
-  subheader: {
+  subHeader: {
     type: String,
     required: true
   },

@@ -21,7 +21,7 @@ curl "${API}${URL_PATH}" \
       "templateType": "'"${TYPE}"'",
       "pageTitle": "'"${TITLE}"'",
       "header": "'"${HEADER}"'",
-      "subheader": "'"${SUBHEADER}"'",
+      "subHeader": "'"${SUBHEADER}"'",
       "pageContent": "'"${CONTENT}"'",
       "contact": "'"${CONTACT}"'"
     }

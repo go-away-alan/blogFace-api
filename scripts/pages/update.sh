@@ -22,7 +22,7 @@ curl "${API}${URL_PATH}/${ID}" \
       "templateType": "'"${TYPE}"'",
       "pageTitle": "'"${TITLE}"'",
       "header": "'"${HEADER}"'",
-      "subheader": "'"${SUBHEADER}"'",
+      "subHeader": "'"${SUBHEADER}"'",
       "pageContent": "'"${CONTENT}"'",
       "contact": "'"${CONTACT}"'"
     }
