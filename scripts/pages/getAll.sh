@@ -1,3 +1,5 @@
+#sh scripts/pages/getAll.sh
+
 #!/bin/sh
 
 API="http://localhost:4741"

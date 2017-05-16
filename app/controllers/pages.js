@@ -35,9 +35,10 @@ const destroy = (req, res, next) => {
 }
 
 const create = (req, res, next) => {
+  console.log('Req is', req.user)
   // When we create, it will fill in the owner for you. In other words, it adds a key, _owner, to req.body.example and sets the req.user._id as well.
   const page = Object.assign(req.body.page, {
-    _owner: req.user._id
+    owner: req.user._id
   })
   console.log(page)
   // Executes the create on the Page model with the page object.
