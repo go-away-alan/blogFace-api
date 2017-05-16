@@ -3,23 +3,15 @@
 const mongoose = require('mongoose')
 
 const pageSchema = new mongoose.Schema({
-  title: {
+  pageTitle: {
     type: String,
     required: true
   },
-  author: {
-    type: String,
-    required: true
-  },
-  originalLanguage: {
-    type: String,
-    required: true
-  },
-  firstPublished: {
+  templateType: {
     type: Number,
     required: true
   },
-  _owner: {
+  owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
