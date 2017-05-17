@@ -5,12 +5,12 @@
 API="http://localhost:4741"
 URL_PATH="/pages"
 TYPE=1
-TITLE="My blogFace Page"
-HEADER="About Me"
-SUBHEADER="Andy Zhong"
-CONTENT="Waddup peeps it's the OG Andy Z and I just created a blogFace Page!"
-CONTACT="@andyjz"
-TOKEN="ZWLGo22P6Ub0nFzM3xSaHlXggOGWeop3SdJ1thLe2YM=--ylnWIk4Dc+5W0Mvl3NtAZz1IKAWDcCURvGewUNNQtH0="
+TITLE="His blogFace Page"
+HEADER="What is happening to football"
+SUBHEADER="Steve D"
+CONTENT="Waddup peeps it's the OG Steve D and I just created a blogFace Page!"
+CONTACT="@steved"
+TOKEN="fErW0oZN/BgHewBB80bteeJ8+/xDpYlYGn6Rn5D8U/o=--wfLZe2TO9m7/wfsBhrnQNuykaG8KSQgarpDycp+XvWI="
 curl "${API}${URL_PATH}" \
   --include \
   --request POST \
