@@ -6,11 +6,11 @@ const models = require('app/models')
 const Blogpost = models.blogpost
 
 const authenticate = require('./concerns/authenticate')
-// const setUser = require('./concerns/set-current-user')
+const setUser = require('./concerns/set-current-user')
 const setModel = require('./concerns/set-mongoose-model')
 
 const index = (req, res, next) => {
-  Blogpost.find()
+  Blogpost.find({owner: req.user.id})
     .then(blogposts => res.json({
       blogposts: blogposts.map((e) =>
         e.toJSON({ virtuals: true, user: req.user }))
@@ -71,7 +71,7 @@ module.exports = controller({
   update,
   destroy
 }, { before: [
-  // { method: setUser, only: ['index', 'show'] },
+  { method: setUser, only: ['index', 'show'] },
   { method: authenticate, except: ['index', 'show'] },
   { method: setModel(Blogpost), only: ['show'] },
   { method: setModel(Blogpost, { forUser: true }), only: ['update', 'destroy'] }

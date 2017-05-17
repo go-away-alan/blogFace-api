@@ -3,28 +3,20 @@
 #!/bin/bash
 
 API="http://localhost:4741"
-URL_PATH="/pages"
-TYPE=1
-TITLE="My blogFace Page"
-HEADER="About Me"
-SUBHEADER="Andy Zhong"
-CONTENT="I updated my Page!"
-CONTACT="@andyjz"
-TOKEN="PKovx5SovaSpolfE76ado9Vu+UD2X/ihhE35BDqY3xM=--PHIllUNmbKmXmQiFh8h8JIn4ad1jKLGMnA3z0fW4syk="
-ID="591b3ded212207f9bb92fab6"
+URL_PATH="/blogposts"
+BLOGPOSTTITLE="Why you SHOULDNT follow me"
+BLOGPOSTCONTENT="I dont know what im doing"
+ID="591c71e60a65b62a24bd9166"
+TOKEN="gBL4J8T7/8QvDtduSysLpmSsr6xDs+/WX1Q3+HxrdIc=--iY4tNdW2GrfHM1t/I2JJw0c4SAMzouYtHN147wi/3iM="
 curl "${API}${URL_PATH}/${ID}" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
-    "page": {
-      "templateType": "'"${TYPE}"'",
-      "pageTitle": "'"${TITLE}"'",
-      "header": "'"${HEADER}"'",
-      "subHeader": "'"${SUBHEADER}"'",
-      "pageContent": "'"${CONTENT}"'",
-      "contact": "'"${CONTACT}"'"
+    "blogpost": {
+      "blogpostTitle": "'"${BLOGPOSTTITLE}"'",
+      "blogpostContent": "'"${BLOGPOSTCONTENT}"'"
     }
   }'
 

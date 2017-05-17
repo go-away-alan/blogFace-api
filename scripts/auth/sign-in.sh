@@ -5,8 +5,8 @@
 API="http://localhost:4741"
 URL_PATH="/sign-in"
 # AZ: Added EMAIL and PASSWORD in order to speed up the curl script testing process.
-EMAIL="tests"
-PASSWORD="test"
+EMAIL="admin"
+PASSWORD="admin"
 
 curl "${API}${URL_PATH}" \
   --include \
