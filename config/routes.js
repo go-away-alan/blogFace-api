@@ -19,5 +19,7 @@ module.exports = require('lib/wiring/routes')
 
 // AZ: Added resource for pages here.
 .resources('pages')
+// AZ: Added resource for blogposts here.
+.resources('blogposts')
 
 // all routes created
