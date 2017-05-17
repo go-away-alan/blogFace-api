@@ -4,9 +4,9 @@
 
 API="http://localhost:4741"
 URL_PATH="/blogposts"
-BLOGPOSTTITLE="How you get enough sleep"
-BLOGPOSTCONTENT="you work hard during the day"
-TOKEN="tB3MfEGQcVW58hIleB3qJsT4K2QShjB7ahq9aQK/a/s=--jfX5KbFRu1hDg7qIE7ZFTGIGQ8wnRBzPVC2GYpvdq3k="
+BLOGPOSTTITLE="Why humans love TV"
+BLOGPOSTCONTENT="because marky mark put them in every damn room"
+TOKEN="55eP/bjArMpyBvT4zZN+Y+1oW0X2KzH2QX9lKj2x5Bw=--xkBAhLkvYynbwxCRm5hPKS/nTqMj5Z2dDcG5FF89tUE="
 curl "${API}${URL_PATH}" \
   --include \
   --request POST \

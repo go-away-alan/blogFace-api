@@ -7,7 +7,7 @@ URL_PATH="/blogposts"
 
 # How should we handle this functionality? Allow all people to view?
 # Replace this TOKEN with a valid one.
-TOKEN="akzzHGB7bEY8U5fyoWYubFViul3GJkIknZZByZOph/o=--FVW3ijZbypxmjhoVDabnlIPT7syWhPdeTO2t+t/yRc8="
+TOKEN="55eP/bjArMpyBvT4zZN+Y+1oW0X2KzH2QX9lKj2x5Bw=--xkBAhLkvYynbwxCRm5hPKS/nTqMj5Z2dDcG5FF89tUE="
 
 curl "${API}${URL_PATH}" \
   --include \
