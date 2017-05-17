@@ -13,9 +13,7 @@ const index = (req, res, next) => {
   Blogpost.find()
     .then(blogposts => res.json({
       blogposts: blogposts.map((e) =>
-        e.toJSON({ virtuals: true
-          // , user: req.user
-        }))
+        e.toJSON({ virtuals: true, user: req.user }))
     }))
     .catch(next)
 }

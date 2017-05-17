@@ -3,27 +3,19 @@
 #!/bin/sh
 
 API="http://localhost:4741"
-URL_PATH="/pages"
-TYPE=1
-TITLE="My blogFace Page"
-HEADER="About Me"
-SUBHEADER="Andy Zhong"
-CONTENT="Waddup peeps it's the OG Andy Z and I just created a blogFace Page!"
-CONTACT="@andyjz"
-TOKEN="PKovx5SovaSpolfE76ado9Vu+UD2X/ihhE35BDqY3xM=--PHIllUNmbKmXmQiFh8h8JIn4ad1jKLGMnA3z0fW4syk="
+URL_PATH="/blogposts"
+BLOGPOSTTITLE="How you get enough sleep"
+BLOGPOSTCONTENT="you work hard during the day"
+TOKEN="tB3MfEGQcVW58hIleB3qJsT4K2QShjB7ahq9aQK/a/s=--jfX5KbFRu1hDg7qIE7ZFTGIGQ8wnRBzPVC2GYpvdq3k="
 curl "${API}${URL_PATH}" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
-    "page": {
-      "templateType": "'"${TYPE}"'",
-      "pageTitle": "'"${TITLE}"'",
-      "header": "'"${HEADER}"'",
-      "subHeader": "'"${SUBHEADER}"'",
-      "pageContent": "'"${CONTENT}"'",
-      "contact": "'"${CONTACT}"'"
+    "blogpost": {
+      "blogpostTitle": "'"${BLOGPOSTTITLE}"'",
+      "blogpostContent": "'"${BLOGPOSTCONTENT}"'"
     }
   }'
 
