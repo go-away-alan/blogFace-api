@@ -4,9 +4,9 @@
 # SHOULDNT BE ABLE TO DELETE ANY PAGES UNLESS YOU MADE IT.
 
 API="http://localhost:4741"
-URL_PATH="/pages"
-TOKEN="PKovx5SovaSpolfE76ado9Vu+UD2X/ihhE35BDqY3xM=--PHIllUNmbKmXmQiFh8h8JIn4ad1jKLGMnA3z0fW4syk="
-ID="591b3ded212207f9bb92fab6"
+URL_PATH="/blogposts"
+TOKEN="gBL4J8T7/8QvDtduSysLpmSsr6xDs+/WX1Q3+HxrdIc=--iY4tNdW2GrfHM1t/I2JJw0c4SAMzouYtHN147wi/3iM="
+ID="591c71e60a65b62a24bd9166"
 curl "${API}${URL_PATH}/${ID}" \
   --include \
   --request DELETE \
