@@ -2,11 +2,12 @@
 
 #!/bin/bash
 # SHOULDNT BE ABLE TO DELETE ANY PAGES UNLESS YOU MADE IT.
+# confirmed by creating and deleting 591c8e66e49f211bed81612d  jfallon
 
 API="http://localhost:4741"
 URL_PATH="/pages"
-TOKEN="PKovx5SovaSpolfE76ado9Vu+UD2X/ihhE35BDqY3xM=--PHIllUNmbKmXmQiFh8h8JIn4ad1jKLGMnA3z0fW4syk="
-ID="591b3ded212207f9bb92fab6"
+TOKEN="elgosaPgT1E1gHxAwpZj3xFOqk5Topu5mlCEf19cNLw=--tl4rgyIfE8T0f7wYAjm7tRKAT5/JrvVoeQ7617N1Nvo="
+ID="591c8e66e49f211bed81612d"
 curl "${API}${URL_PATH}/${ID}" \
   --include \
   --request DELETE \

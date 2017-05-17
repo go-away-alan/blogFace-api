@@ -10,7 +10,7 @@ HEADER="About Me"
 SUBHEADER="Andy Zhong"
 CONTENT="Waddup peeps it's the OG Andy Z and I just created a blogFace Page!"
 CONTACT="@andyjz"
-TOKEN="PKovx5SovaSpolfE76ado9Vu+UD2X/ihhE35BDqY3xM=--PHIllUNmbKmXmQiFh8h8JIn4ad1jKLGMnA3z0fW4syk="
+TOKEN="elgosaPgT1E1gHxAwpZj3xFOqk5Topu5mlCEf19cNLw=--tl4rgyIfE8T0f7wYAjm7tRKAT5/JrvVoeQ7617N1Nvo="
 curl "${API}${URL_PATH}" \
   --include \
   --request POST \
