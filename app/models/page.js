@@ -23,6 +23,17 @@ const pageSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+
+  columnHeader1: {
+    type: String,
+    required: false
+  },
+
+  columnHeader2: {
+    type: String,
+    required: false
+  },
+
   pageContentMore: {
     type: String,
     required: false
