@@ -6,7 +6,7 @@ const blogpostSchema = new mongoose.Schema({
   blogpostTitle: {
     type: String,
     // AZ: Need to Change this back to true once the front end has been completed.
-    required: false
+    required: true
   },
   blogpostContent: {
     type: String,
