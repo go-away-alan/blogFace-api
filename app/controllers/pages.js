@@ -27,19 +27,19 @@ const show = (req, res) => {
 }
 
 const destroy = (req, res, next) => {
-  console.log('ReqPage is ', req.page)
+  // console.log('ReqPage is ', req.page)
   req.page.remove()
     .then(() => res.sendStatus(204))
     .catch(next)
 }
 
 const create = (req, res, next) => {
-  console.log('ReqUser is ', req.user)
+  // console.log('ReqUser is ', req.user)
   // When we create, it will fill in the owner for you. In other words, it adds a key, owner, to req.body.example and sets the req.user._id as well.
   const page = Object.assign(req.body.page, {
     owner: req.user._id
   })
-  console.log(page)
+  // console.log(page)
   // Executes the create on the Page model with the page object.
   // This page object is created with data from the client and the current user as owner.
   Page.create(page)

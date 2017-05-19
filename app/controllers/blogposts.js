@@ -27,19 +27,19 @@ const show = (req, res) => {
 }
 
 const destroy = (req, res, next) => {
-  console.log('ReqBlogpost is ', req.blogpost)
+  // console.log('ReqBlogpost is ', req.blogpost)
   req.blogpost.remove()
     .then(() => res.sendStatus(204))
     .catch(next)
 }
 
 const create = (req, res, next) => {
-  console.log('ReqUser is ', req.user)
+  // console.log('ReqUser is ', req.user)
   // When we create, it will fill in the owner for you. In other words, it adds a key, owner, to req.body.example and sets the req.user._id as well.
   const blogpost = Object.assign(req.body.blogpost, {
     owner: req.user._id
   })
-  console.log(blogpost)
+  // console.log(blogpost)
   // Executes the create on the Blogpost model with the blogpost object.
   // This blogpost object is created with data from the client and the current user as owner.
   Blogpost.create(blogpost)
